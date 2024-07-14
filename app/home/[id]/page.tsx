@@ -17,7 +17,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { unstable_noStore as noStore } from "next/cache"; 
+import { unstable_noStore as noStore } from "next/cache";
 
 const getData = async (homeId: string) => {
   noStore();
@@ -66,7 +66,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
   });
 
   return (
-    <div className=" w-3/4 mx-auto mt-10 mb-12 ">
+    <div className=" w-3/4    mx-auto mt-10 mb-12 ">
       <h1 className="font-meduim text-2xl mb-5 ">{data?.title} </h1>
       <div className="relative h-[550px] ">
         <Image
@@ -76,12 +76,12 @@ const Page = async ({ params }: { params: { id: string } }) => {
           fill
         />
       </div>
-      <div className="flex justify-between gap-x-24 mt-8 ">
-        <div className="w-2/3">
+      <div className="flex sm:flex-row flex-col justify-between gap-x-24 mt-8 ">
+        <div className="   sm:w-2/3  ">
           <h3 className="text-xl font-medium">
             {" "}
             {country?.flag} {country?.label} / {country?.region}{" "}
-          </h3>
+          </h3> 
           <div className="flex gap-x-2 text-muted-foreground">
             <p>{data?.guests} guests</p> * <p> {data?.bedrooms} bedrooms</p> *
             <p>{data?.bathrooms} bathrooms</p>

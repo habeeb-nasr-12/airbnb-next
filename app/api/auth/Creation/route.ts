@@ -24,4 +24,4 @@ export async function GET() {
     });
   }
   return NextResponse.redirect("https://airbnb-next-eight.vercel.app")
-}   
+}

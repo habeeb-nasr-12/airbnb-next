@@ -56,11 +56,11 @@ const SearchModalComponent = () => {
   return (
     <>
       <div
-        className="rounded-full py-2 px-5 border flex items-center cursor-pointer"
+        className="rounded-full py-2 px-5   border flex items-center cursor-pointer"
         onClick={handleOpen}
       >
         <div className="flex h-full divide-x font-medium">
-          <p className="px-4">Anywhere</p>
+          <p className="px-4">Any where</p>
           <p className="px-4">Any week</p>
           <p className="px-4">Any Guests</p>
         </div>

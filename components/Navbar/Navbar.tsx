@@ -7,7 +7,7 @@ import SearchModalComponet from "../SearchComponent/SearchModalComponet";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between container mx-auto w-full border-b px-5 lg:px-10 ">
+    <nav className="flex items-center justify-between container mx-auto w-full border-b p-0">
       <Link href={"/"}>
         <Image
           src={DesktopImage}
