@@ -17,8 +17,10 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { unstable_noStore as noStore } from "next/cache"; 
 
 const getData = async (homeId: string) => {
+  noStore();
   const data = await prisma.home.findUnique({
     where: {
       id: homeId,

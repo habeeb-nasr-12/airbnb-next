@@ -316,6 +316,7 @@
     "yocto-queue": "^0.1.0"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.12",
     "@types/node": "20.14.10",
     "@types/react": "18.3.3"
   },
@@ -324,7 +325,8 @@
     "build": "next build",
     "postbuild": "node ./src/scripts/build-algolia-search.js",
     "start": "next start",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": " prisma generate",
   },
   "keywords": [],
   "author": "",
