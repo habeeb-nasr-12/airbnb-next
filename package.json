@@ -244,6 +244,7 @@
     "set-function-length": "^1.2.2",
     "set-function-name": "^2.0.2",
     "shallow-equal": "^1.2.1",
+    "sharp": "^0.33.4",
     "shebang-command": "^2.0.0",
     "shebang-regex": "^3.0.0",
     "side-channel": "^1.0.6",
