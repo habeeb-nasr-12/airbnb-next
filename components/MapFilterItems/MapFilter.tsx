@@ -35,7 +35,7 @@ const MapFilter = () => {
           )}
         >
           <div className="relative  w-6 h-6">
-            <Image src={imageUrl} alt="category image" width={24} height={24} />
+            <Image src={imageUrl as string} alt="category image" width={24} height={24} />
           </div>
           <p className="text-xs font-medium">{title} </p>
         </Link>
