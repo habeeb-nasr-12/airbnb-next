@@ -253,7 +253,6 @@
     "source-map-js": "^1.2.0",
     "streamsearch": "^1.1.0",
     "string-width": "^5.1.2",
-    "string-width-cjs": "^4.2.3",
     "string.prototype.matchall": "^4.0.11",
     "string.prototype.trim": "^1.2.9",
     "string.prototype.trimend": "^1.0.8",
@@ -326,7 +325,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node ./src/scripts/build-algolia-search.js",
+ 
     "start": "next start",
     "test": "jest",
     "postinstall": " prisma generate"
