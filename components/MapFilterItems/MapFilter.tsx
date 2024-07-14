@@ -42,6 +42,7 @@ const MapFilter = () => {
       ))}
     </div>
   );
+  
 };
 
 export default MapFilter;
