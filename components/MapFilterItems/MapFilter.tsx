@@ -25,9 +25,14 @@ const MapFilter = () => {
     <div className="flex justify-center mx-auto gap-x-10 mt-5 w-full  overflow-x-scroll no-scrollbar ">
       {categoryItems.map(({ id, imageUrl, description, name, title }) => (
         <Link
-          key={id}
-          href={pathname + "?" + createQueryString("filter", name)}
-          className={cn(search == name ?  "border-b-2 border-black pb-2 flex-shrink-0": "opacity-70 flex-shrink-0 ","flex flex-col items-center gap-3")}
+          key={name as string}
+          href={pathname + "?" + createQueryString("filter", name as string)}
+          className={cn(
+            search == name
+              ? "border-b-2 border-black pb-2 flex-shrink-0"
+              : "opacity-70 flex-shrink-0 ",
+            "flex flex-col items-center gap-3"
+          )}
         >
           <div className="relative  w-6 h-6">
             <Image src={imageUrl} alt="category image" width={24} height={24} />
