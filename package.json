@@ -326,7 +326,7 @@
     "postbuild": "node ./src/scripts/build-algolia-search.js",
     "start": "next start",
     "test": "jest",
-    "postinstall": " prisma generate",
+    "postinstall": " prisma generate"
   },
   "keywords": [],
   "author": "",
