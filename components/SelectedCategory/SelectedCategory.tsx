@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 const SelectedCategory = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>("");
+  const [selectedCategory, setSelectedCategory] = useState("");
   return (
     <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-8 mt-10 w-3/5 mx-auto mb-36">
       <input
@@ -15,16 +15,18 @@ const SelectedCategory = () => {
         value={selectedCategory as string}
       />
       {categoryItems.map(({ name, id, imageUrl, title }) => (
-        <div key={id} className="cursor-pointer">
+        <div key={name as string} className="cursor-pointer">
           <Card
-            className={ ` flex  justify-center  ${ selectedCategory === name && 'border-primary'} ` }
-            onClick={() => setSelectedCategory(name)}
+            className={` flex  justify-center  ${
+              selectedCategory === name && "border-primary"
+            } `}
+            onClick={() => setSelectedCategory(name as string)}
           >
             <CardHeader className="x">
               <Image
                 className="w-8 h-8"
-                src={imageUrl}
-                alt={name}
+                src={imageUrl as string}
+                alt={name as string}
                 height={32}
                 width={32}
               />
