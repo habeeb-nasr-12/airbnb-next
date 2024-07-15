@@ -22,6 +22,8 @@ export async function GET() {
         profileImage : user.picture ?? `https://avatar.vercel.sh/${user.given_name}`
       },
     });
+
   }
+ 
   return NextResponse.redirect("https://airbnb-next-eight.vercel.app")
 }

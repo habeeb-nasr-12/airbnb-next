@@ -11,7 +11,7 @@ const Counter = ({name }: {name:string}) => {
     }
   };
   return (
-    <div className="flex items-center gap-x-4">
+    <div className="flex   items-center gap-x-4">
       <input type="hidden" name={name}  value={amount}  />
       <Button
         onClick={handleMinus}
@@ -25,7 +25,7 @@ const Counter = ({name }: {name:string}) => {
       <Button
         onClick={() => {
           setAmount(amount + 1);
-        }}
+        }}                  
         variant={"outline"}
         size={"icon"}
         type="button"

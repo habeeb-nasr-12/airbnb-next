@@ -14,13 +14,11 @@ import { useState } from "react";
 import Box from "@mui/material/Box";
 import * as React from "react";
 
-
 import { useCountries } from "@/app/lib/getCountries";
 
 import SubmitButton from "../SubmitButton";
 import { Card, CardHeader } from "../ui/card";
 import Counter from "../Counter/Counter";
-
 
 const SearchModalComponent = () => {
   const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -85,39 +83,33 @@ const SearchModalComponent = () => {
               <DialogTitle className="text-3xl font-semibold">
                 Select all the info you need
               </DialogTitle>
-            
 
               <Card>
-                <CardHeader className="flex flex-col gap-y-5">
-                  <div className="flex items-center justify-between">
-                    <div className="flex flex-col">
-                      <h3 className="underline font-medium">Guests</h3>
-                      <p className="text-muted-foreground text-sm">
-                        How many guests do you want?
-                      </p>
-                    </div>
-
-                    <Counter name="guest" />
+                <CardHeader className="flex  ">
+                  <div className="flex sm:flex-row flex-col items-center justify-between">
+                    <h3 className="underline font-medium">Guests</h3>
+                    <p className="text-muted-foreground sm:my-0 my-4 text-sm  ">
+                      How many guests do you want?
+                    </p>
+                    <Counter name="Guests" />
                   </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex flex-col">
-                      <h3 className="underline font-medium">Rooms</h3>
-                      <p className="text-muted-foreground text-sm">
-                        How many rooms do you have?
-                      </p>
-                    </div>
-
-                    <Counter name="room" />
+                </CardHeader>
+                <CardHeader className="   flex  ">
+                  <div className="flex sm:flex-row flex-col items-center justify-between">
+                    <h3 className="underline font-medium">Rooms</h3>
+                    <p className="text-muted-foreground sm:my-0 my-4 text-sm  ">
+                      How many rooms do you want?
+                    </p>
+                    <Counter name="Rooms" />
                   </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex flex-col">
-                      <h3 className="underline font-medium">Bathrooms</h3>
-                      <p className="text-muted-foreground text-sm">
-                        How many bathrooms do you have?
-                      </p>
-                    </div>
-
-                    <Counter name="bathroom" />
+                </CardHeader>
+                <CardHeader className=" flex  ">
+                  <div className="flex sm:flex-row flex-col items-center justify-between">
+                    <h3 className="underline font-medium">bathrooms</h3>
+                    <p className="text-muted-foreground sm:my-0 my-4 text-sm  ">
+                      How many bathrooms do you want?
+                    </p>
+                    <Counter name="bathrooms" />
                   </div>
                 </CardHeader>
               </Card>
