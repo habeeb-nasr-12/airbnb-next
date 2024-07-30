@@ -54,7 +54,7 @@ const SearchModalComponent = () => {
   return (
     <>
       <div
-        className="rounded-full py-2 px-5   border flex items-center cursor-pointer"
+        className="rounded-full  py-2 px-5   border flex items-center cursor-pointer"
         onClick={handleOpen}
       >
         <div className="flex h-full divide-x font-medium">
@@ -62,7 +62,7 @@ const SearchModalComponent = () => {
           <p className="px-4">Any week</p>
           <p className="px-4">Any Guests</p>
         </div>
-        <Search className="bg-primary text-white p-1 h-8 w-8 rounded-full " />
+        <Search className="bg-primary text-white p-1 h-8 w-8 rounded-full  " />
       </div>
 
       <BootstrapDialog

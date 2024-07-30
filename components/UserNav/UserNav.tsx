@@ -24,7 +24,7 @@ const UserNav = async () => {
   });
   
   return (
-    <div>
+    <div >
       <DropdownMenu>
         <DropdownMenuTrigger>
           <div className=" flex items-center py-2 px-2 lg:px-4 lg:py-4 rounded-full border gap-x-3">
