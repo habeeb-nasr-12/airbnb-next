@@ -26,10 +26,10 @@ const getData = async ({
       addedLoaction: true,
       addedDescription: true,
       categoryName: searchParams?.filter ?? undefined,
-      country :searchParams?.country ?? undefined,
-      guests :searchParams?.guest ?? undefined,
-      bedrooms :searchParams?.room  ?? undefined,
-      bathrooms :searchParams?.bathroom ?? undefined
+      country: searchParams?.country ?? undefined,
+      guests: searchParams?.guest ?? undefined,
+      bedrooms: searchParams?.room ?? undefined,
+      bathrooms: searchParams?.bathroom ?? undefined
     },
     select: {
       photo: true,

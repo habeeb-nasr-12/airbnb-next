@@ -25,6 +25,7 @@ const getData = async (homeId: string) => {
     where: {
       id: homeId,
     },
+  
 
     select: {
       photo: true,
