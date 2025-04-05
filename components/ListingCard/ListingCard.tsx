@@ -29,11 +29,12 @@ const ListingCard = ({
 }: props) => {
   const { getCountryByValue } = useCountries();
   const country = getCountryByValue(location);
+  
   return (
     <div className="flex flex-col">
       <div className="relative h-72">
         <Image
-          src={`https://rohyksdlruptnthzbbxs.supabase.co/storage/v1/object/public/images/${photo}`}
+          src={`https://nufhzqmtwqalqdgjepac.supabase.co/storage/v1/object/public/images/${photo}`}
           className="rounded-lg h-full object-cover mb-4"
           alt={"Image of the house "}
           fill

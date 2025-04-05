@@ -4,6 +4,8 @@ import { redirect } from "next/navigation";
 import prisma from "./lib/db";
 import { supabase } from "./lib/supabase";
 import { revalidatePath } from "next/cache";
+import { v4 as uuidv4 } from 'uuid';
+
 
 export async function createAirbnbHome({ userId }: { userId: string }) {
   const data = await prisma.home.findFirst({
@@ -78,12 +80,24 @@ export async function CreateDescription(formData: FormData) {
   let bathroomsNumbers = formData.get("bathrooms") as string;
   const homeId = formData.get("homeId") as string;
 
+  // const { data: imageData } = await supabase.storage
+  //   .from("images")
+  //   .upload(`${image.name}-${new Date()}`, image, {
+  //     cacheControl: "2592000 ",
+  //     contentType: "image/png",
+  //     upsert: true,
+  //   });
+
+
+  const uniqueFileName = `${uuidv4()}.${image.name.split('.').pop()}`;
   const { data: imageData } = await supabase.storage
     .from("images")
-    .upload(`${image.name}-${new Date()}`, image, {
-      cacheControl: "2592000 ",
-      contentType: "image/png",
+    .upload(uniqueFileName, image, {
+      cacheControl: "2592000",
+      contentType: image.type,
+      upsert: false
     });
+
   const data = await prisma.home.update({
     where: {
       id: homeId,
@@ -101,6 +115,7 @@ export async function CreateDescription(formData: FormData) {
   });
   return redirect(`/create/${homeId}/address`);
 }
+
 export async function createLocation(formData: FormData) {
   const homeId = formData.get("homeId") as string;
   const country = formData.get("country") as string;
