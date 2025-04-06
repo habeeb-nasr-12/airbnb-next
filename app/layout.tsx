@@ -23,6 +23,7 @@ export default function RootLayout({
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <Navbar />
           {children}
+          <SpeedInsights />
         </AppRouterCacheProvider>
       </body>
     </html>
