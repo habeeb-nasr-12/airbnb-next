@@ -1,22 +1,17 @@
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable @next/next/no-async-client-component */
 
 import { CreateReservation } from "@/app/actions";
 import prisma from "@/app/lib/db";
 import { useCountries } from "@/app/lib/getCountries";
 import CategoryShowCase from "@/components/CategoryShowCase/CategoryShowCase";
-import HomeMap from "@/components/HomeMap";
 import { SelectCalender } from "@/components/SelectCalender/SelectCalender";
 import { ReservationSubmitButton } from "@/components/SubmitButton";
-import { Button } from "@/components/ui/button";
-
+import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 import { unstable_noStore as noStore } from "next/cache";
 
 const getData = async (homeId: string) => {
@@ -25,9 +20,7 @@ const getData = async (homeId: string) => {
     where: {
       id: homeId,
     },
-  
-
-    select: {
+      select: {
       photo: true,
       bathrooms: true,
       guests: true,
@@ -73,7 +66,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
         <Image
           alt="image of home"
           className="rounded-lg h-full object-cover w-full"
-          src={`https://rohyksdlruptnthzbbxs.supabase.co/storage/v1/object/public/images/${data?.photo}`}
+          src={`https://nufhzqmtwqalqdgjepac.supabase.co/storage/v1/object/public/images/${data?.photo}`}
           fill
         />
       </div>
